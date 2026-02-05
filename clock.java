@@ -22,6 +22,35 @@ public class clock {
             minTime = ans(hour, minute, second.replace('@', '0'));
             maxTime = ans(hour, minute, second.replace('@', '9'));
         }
+        if (second.charAt(0) == '@') {
+            minTime = ans(hour, minute, second.replace('@', '0'));
+            maxTime = ans(hour, minute, second.replace('@', '5'));
+        }
+
+        if (minute.charAt(1) == '@') {
+            minTime = ans(hour, minute.replace('@', '0'), second);
+            maxTime = ans(hour, minute.replace('@', '9'), second);
+        }
+        if (minute.charAt(0) == '@') {
+            minTime = ans(hour, minute.replace('@', '0'), second);
+            maxTime = ans(hour, minute.replace('@', '5'), second);
+        }
+
+
+        if (hour.charAt(1) == '@') {
+            if (hour.charAt(0) == '1') {
+            minTime = ans(hour.replace('@', '0'), minute, second);
+            maxTime = ans(hour.replace('@', '9'), minute, second);
+        }
+        else{
+            minTime = ans(hour.replace('@', '0'), minute, second);
+            maxTime = ans(hour.replace('@', '4'), minute, second);
+        }
+        }
+        if (hour.charAt(0) == '@') {
+            minTime = ans(hour.replace('@', '0'), minute, second);
+            maxTime = ans(hour.replace('@', '2'), minute, second);
+        }
 
         System.out.println(minTime);
         System.out.println(maxTime);
