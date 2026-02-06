@@ -1,4 +1,7 @@
-// // 100110 -> 3 switch required
+// 100110 -> 3 switch required
+// 101011
+// Pairs: (10)(10)(11)
+// Flips: 1 + 1 + 0 = 2
 
 import java.util.*;
 
