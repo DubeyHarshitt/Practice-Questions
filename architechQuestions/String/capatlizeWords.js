@@ -3,6 +3,18 @@
 // Input: "hello world harshit"
 // Output: "Hello World Harshit"
 
+// ✅ Lowercase → Uppercase
+// upper = charCode - 32
+
+// ✅ Uppercase → Lowercase
+// lower = charCode + 32
+
+// Char	ASCII
+// Space " "	32
+
+// "b".charCodeAt(0);     // 98
+// String.fromCharCode(65); // "A"
+
 function capitalizeWords(str) {
     let result = "";
     let isNewWord = true;
